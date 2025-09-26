@@ -24,7 +24,7 @@ data_time <- data.frame(
 
 for (tentative in seq_len(nb_tent)) {
 
-    cat("\nTentative ", tentative, "\n")
+    cat("\nTentative", tentative, "à", Sys.time(), "\n")
 
     cat("Préparation des données\n")
     path_data <- tempfile(fileext = ".csv") |> normalizePath(mustWork = FALSE)
