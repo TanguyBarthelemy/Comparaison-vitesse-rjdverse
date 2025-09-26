@@ -3022,20 +3022,20 @@
         "rJava (>= 1.0-6)",
         "rjd3toolkit (>= 3.5.1)"
       ],
-      "Remotes": "github::rjdverse/rjd3toolkit@develop",
       "Encoding": "UTF-8",
+      "LazyData": "TRUE",
       "RoxygenNote": "7.3.2",
       "SystemRequirements": "Java (>= 17)",
       "Collate": "'deprecated.R' 'providers.R' 'jd3spreadsheet.R' 'jd3txt.R' 'jd3xml.R' 'zzz.R'",
+      "Author": "Jean Palate [aut], Alessandro Piovani [aut, cre], Tanguy Barthelemy [ctb, art]",
+      "Maintainer": "Alessandro Piovani <alessandro.piovani@istat.it>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "rjd3providers",
       "RemoteUsername": "rjdverse",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "rjd3providers",
+      "RemoteRef": "develop",
       "RemoteSha": "e7d0e07a8e7397ee342f12913a297072463d2353",
-      "NeedsCompilation": "no",
-      "Author": "Jean Palate [aut], Alessandro Piovani [aut, cre], Tanguy Barthelemy [ctb, art]",
-      "Maintainer": "Alessandro Piovani <alessandro.piovani@istat.it>"
+      "Remotes": "github::rjdverse/rjd3toolkit@develop"
     },
     "rjd3toolkit": {
       "Package": "rjd3toolkit",
@@ -3068,15 +3068,14 @@
       "Encoding": "UTF-8",
       "Collate": "'utils.R' 'jd2r.R' 'protobuf.R' 'arima.R' 'calendars.R' 'calendarts.R' 'decomposition.R' 'differencing.R' 'display.R' 'distributions.R' 'generics.R' 'jd3rslts.R' 'modellingcontext.R' 'procresults.R' 'regarima_generic.R' 'regarima_rslts.R' 'spec_benchmarking.R' 'spec_regarima.R' 'splines.R' 'tests_regular.R' 'tests_seasonality.R' 'tests_td.R' 'timeseries.R' 'variables.R' 'zzz.R'",
       "Language": "en-GB",
+      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "rjd3toolkit",
       "RemoteUsername": "rjdverse",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "178a2e399100d8f121a98f57ace8130363a7749c",
-      "NeedsCompilation": "no",
-      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
-      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>"
+      "RemoteRepo": "rjd3toolkit",
+      "RemoteRef": "develop",
+      "RemoteSha": "178a2e399100d8f121a98f57ace8130363a7749c"
     },
     "rjd3tramoseats": {
       "Package": "rjd3tramoseats",
@@ -3177,21 +3176,20 @@
         "rjd3toolkit (>= 3.5.1)",
         "RProtoBuf (>= 0.4.17)"
       ],
-      "Remotes": "github::rjdverse/rjd3toolkit@develop",
       "Encoding": "UTF-8",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
       "SystemRequirements": "Java (>= 17)",
       "Collate": "'deprecated.R' 'print.R' 'regarima_generic.R' 'utils.R' 'regarima_outliers.R' 'regarima_spec.R' 'x13_rslts.R' 'x13_spec.R' 'revisions.R' 'set_x11_spec.R' 'udvar.R' 'x13.R' 'zzz.R'",
+      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "rjd3x13",
       "RemoteUsername": "rjdverse",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "rjd3x13",
+      "RemoteRef": "develop",
       "RemoteSha": "9ce41abfc3e1292297a5e37f8a57c3fc696c7d2e",
-      "NeedsCompilation": "no",
-      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
-      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>"
+      "Remotes": "github::rjdverse/rjd3toolkit@develop"
     },
     "rjdworkspace": {
       "Package": "rjdworkspace",
@@ -3391,6 +3389,31 @@
       "Repository": "CRAN",
       "URL": "https://github.com/bethatkinson/rpart, https://cran.r-project.org/package=rpart",
       "BugReports": "https://github.com/bethatkinson/rpart/issues"
+    },
+    "rstudioapi": {
+      "Package": "rstudioapi",
+      "Version": "0.17.1",
+      "Source": "Repository",
+      "Title": "Safely Access the RStudio API",
+      "Description": "Access the RStudio API (if available) and provide informative error messages when it's not.",
+      "Authors@R": "c( person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevin@rstudio.com\"), person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@posit.co\"), person(\"Hadley\", \"Wickham\", role = c(\"aut\"), email = \"hadley@posit.co\"), person(\"Gary\", \"Ritchie\", role = c(\"aut\"), email = \"gary@posit.co\"), person(family = \"RStudio\", role = \"cph\") )",
+      "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rstudio.github.io/rstudioapi/, https://github.com/rstudio/rstudioapi",
+      "BugReports": "https://github.com/rstudio/rstudioapi/issues",
+      "RoxygenNote": "7.3.2",
+      "Suggests": [
+        "testthat",
+        "knitr",
+        "rmarkdown",
+        "clipr",
+        "covr"
+      ],
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Kevin Ushey [aut, cre], JJ Allaire [aut], Hadley Wickham [aut], Gary Ritchie [aut], RStudio [cph]",
+      "Repository": "CRAN"
     },
     "sass": {
       "Package": "sass",

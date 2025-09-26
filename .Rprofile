@@ -1,3 +1,3 @@
 source("renv/activate.R")
 renv::restore(prompt = FALSE)
-# source("R/comp.R")
+rstudioapi::sendToConsole("source(\"R/comp.R\")", execute = FALSE)
