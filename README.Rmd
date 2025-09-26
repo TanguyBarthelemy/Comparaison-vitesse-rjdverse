@@ -1,19 +1,26 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
 # Comparaison-vitesse-rjdverse
 
 <!-- badges: start -->
-
 [![Onyxia](https://img.shields.io/badge/Launch-Datalab-orange?logo=R)](https://datalab.sspcloud.fr/launcher/ide/rstudio?autoLaunch=true&onyxia.friendlyName=%C2%ABCompare-JDemetra%C2%BB&service.image.custom.enabled=true&service.image.pullPolicy=%C2%ABAlways%C2%BB&init.personalInit=%C2%ABhttps://raw.githubusercontent.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse/refs/heads/main/setup.sh%C2%BB)
 <!-- badges: end -->
 
-Ce dépôt contient des programmes de comparaison de vitesse entre les
-estimations de CVS-CJO faites par JDemetra+. On compare ici :
+Ce dépôt contient des programmes de comparaison de vitesse entre les estimations de CVS-CJO faites par JDemetra+.
+On compare ici :
 
 - le [cruncher en v2](https://github.com/jdemetra/jwsacruncher)
 - le [cruncher en v3](https://github.com/jdemetra/jdplus-main)
-- le package [{RJDemetra}](https://github.com/rjdverse/rjdemetra)
-  (version 2)
-- le package [{rjd3x13}](https://github.com/rjdverse/rjd3x13) (version
-  3)
+- le package [{RJDemetra}](https://github.com/rjdverse/rjdemetra) (version 2)
+- le package [{rjd3x13}](https://github.com/rjdverse/rjd3x13) (version 3)
