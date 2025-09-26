@@ -91,4 +91,6 @@ p <- tidyr::pivot_longer(data_time, cols = -nb_series) |>
 ggplotly(p) |>
     layout(legend = list(itemclick = "toggleothers"))
 
-save.image("data.RData")
+
+TBox::write_data(data_time, "output/data_time.csv")
+save.image("output/data.RData")
