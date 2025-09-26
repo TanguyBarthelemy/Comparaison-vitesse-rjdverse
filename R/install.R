@@ -1,5 +1,5 @@
 
-install.packages(c("RJDemetra", "rjwsacruncher", "TBox", "tssim", "remotes", "ggplot2", "tidyr"))
+install.packages(c("RJDemetra", "rjwsacruncher", "TBox", "tssim", "remotes", "ggplot2", "tidyr", "plotly"))
 
 remotes::install_github("rjdverse/rjd3toolkit")
 remotes::install_github("rjdverse/rjd3providers")
