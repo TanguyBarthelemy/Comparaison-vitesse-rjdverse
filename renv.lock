@@ -537,6 +537,65 @@
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "RSPM"
     },
+    "aws.s3": {
+      "Package": "aws.s3",
+      "Version": "0.3.22",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "'AWS S3' Client Package",
+      "Authors@R": "c(person(\"Thomas J.\", \"Leeper\", role = \"aut\", email = \"thosjleeper@gmail.com\", comment = c(ORCID = \"0000-0003-4097-6326\")), person(\"Boettiger\", \"Carl\", role = \"ctb\"), person(\"Andrew\", \"Martin\", role = \"ctb\"), person(\"Mark\", \"Thompson\", role = \"ctb\"), person(\"Tyler\", \"Hunt\", role = \"ctb\"), person(\"Steven\", \"Akins\", role = \"ctb\"), person(\"Bao\", \"Nguyen\", role = \"ctb\"), person(\"Thierry\", \"Onkelinx\", role = \"ctb\"), person(\"Andrii\", \"Degtiarov\", role = \"ctb\"), person(\"Dhruv\", \"Aggarwal\", role = \"ctb\"), person(\"Alyssa\", \"Columbus\", role = \"ctb\"), person(\"Simon\", \"Urbanek\", role = c(\"cre\", \"ctb\"), email = \"simon.urbanek@R-project.org\") )",
+      "Maintainer": "Simon Urbanek <simon.urbanek@R-project.org>",
+      "Description": "A simple client package for the Amazon Web Services ('AWS') Simple Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.",
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/cloudyr/aws.s3",
+      "BugReports": "https://github.com/cloudyr/aws.s3/issues",
+      "Encoding": "UTF-8",
+      "Imports": [
+        "utils",
+        "tools",
+        "curl",
+        "httr",
+        "xml2 (> 1.0.0)",
+        "base64enc",
+        "digest",
+        "aws.signature (>= 0.3.7)"
+      ],
+      "Suggests": [
+        "testthat",
+        "datasets"
+      ],
+      "RoxygenNote": "7.1.0",
+      "NeedsCompilation": "no",
+      "Author": "Thomas J. Leeper [aut] (ORCID: <https://orcid.org/0000-0003-4097-6326>), Boettiger Carl [ctb], Andrew Martin [ctb], Mark Thompson [ctb], Tyler Hunt [ctb], Steven Akins [ctb], Bao Nguyen [ctb], Thierry Onkelinx [ctb], Andrii Degtiarov [ctb], Dhruv Aggarwal [ctb], Alyssa Columbus [ctb], Simon Urbanek [cre, ctb]",
+      "Repository": "CRAN"
+    },
+    "aws.signature": {
+      "Package": "aws.signature",
+      "Version": "0.6.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Amazon Web Services Request Signatures",
+      "Date": "2020-06-01",
+      "Authors@R": "c(person(\"Thomas J.\", \"Leeper\", role = c(\"aut\"), email = \"thosjleeper@gmail.com\", comment = c(ORCID = \"0000-0003-4097-6326\")), person(\"Jonathan\", \"Stott\", email = \"jonathan.stott@magairports.com\", role = c(\"cre\", \"aut\")), person(\"Mike\", \"Kaminsky\", email = \"kaminsky.michael@gmail.com\", role = \"ctb\") )",
+      "Description": "Generates version 2 and version 4 request signatures for Amazon Web Services ('AWS') <https://aws.amazon.com/> Application Programming Interfaces ('APIs') and provides a mechanism for retrieving credentials from environment variables, 'AWS' credentials files, and 'EC2' instance metadata. For use on 'EC2' instances, users will need to install the suggested package 'aws.ec2metadata' <https://cran.r-project.org/package=aws.ec2metadata>.",
+      "License": "GPL (>= 2)",
+      "Imports": [
+        "digest",
+        "base64enc"
+      ],
+      "Suggests": [
+        "testthat (>= 2.1.0)",
+        "aws.ec2metadata (>= 0.1.6)"
+      ],
+      "URL": "https://github.com/cloudyr/aws.signature",
+      "BugReports": "https://github.com/cloudyr/aws.signature/issues",
+      "RoxygenNote": "7.1.0",
+      "NeedsCompilation": "no",
+      "Author": "Thomas J. Leeper [aut] (<https://orcid.org/0000-0003-4097-6326>), Jonathan Stott [cre, aut], Mike Kaminsky [ctb]",
+      "Maintainer": "Jonathan Stott <jonathan.stott@magairports.com>",
+      "Repository": "CRAN",
+      "Encoding": "UTF-8"
+    },
     "backports": {
       "Package": "backports",
       "Version": "1.5.0",
@@ -2141,7 +2200,8 @@
       "NeedsCompilation": "yes",
       "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>), Felix Andrews [ctb], Kevin Wright [ctb] (documentation), Neil Klepeis [ctb], Johan Larsson [ctb] (miscellaneous improvements), Zhijian (Jason) Wen [cph] (filled contour code), Paul Murrell [ctb], Stefan Eng [ctb] (violin plot improvements), Achim Zeileis [ctb] (modern colors), Alexandre Courtiol [ctb] (generics for larrows, lpolygon, lrect and lsegments)",
       "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -2441,7 +2501,8 @@
       "NeedsCompilation": "yes",
       "Author": "Brian Ripley [aut, cre, cph], William Venables [cph]",
       "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "openssl": {
       "Package": "openssl",
@@ -2632,7 +2693,7 @@
       "NeedsCompilation": "no",
       "Author": "Carson Sievert [aut, cre] (ORCID: <https://orcid.org/0000-0002-4958-2844>), Chris Parmer [aut], Toby Hocking [aut], Scott Chamberlain [aut], Karthik Ram [aut], Marianne Corvellec [aut] (ORCID: <https://orcid.org/0000-0002-1994-3581>), Pedro Despouy [aut], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Plotly Technologies Inc. [cph]",
       "Maintainer": "Carson Sievert <cpsievert1@gmail.com>",
-      "Repository": "https://packagemanager.posit.co/cran/latest"
+      "Repository": "RSPM"
     },
     "plyr": {
       "Package": "plyr",
@@ -3096,21 +3157,20 @@
         "rjd3toolkit (>= 3.5.1)",
         "RProtoBuf (>= 0.4.20)"
       ],
-      "Remotes": "github::rjdverse/rjd3toolkit@develop",
       "Encoding": "UTF-8",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
       "SystemRequirements": "Java (>= 17)",
       "Collate": "'deprecated.R' 'print.R' 'utils.R' 'tramoseats_rslts.R' 'tramoseats_spec.R' 'revisions.R' 'seats.R' 'seats_spec.R' 'tramo_generic.R' 'tramo_outliers.R' 'tramo_spec.R' 'tramoseats.R' 'ud_var.R' 'zzz.R'",
+      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
       "RemoteType": "github",
+      "Remotes": "github::rjdverse/rjd3toolkit@develop",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "rjd3tramoseats",
       "RemoteUsername": "rjdverse",
       "RemoteRef": "develop",
-      "RemoteSha": "be6bde6c877301e4c405436d86afa5895b67c0b8",
-      "NeedsCompilation": "no",
-      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
-      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>"
+      "RemoteSha": "be6bde6c877301e4c405436d86afa5895b67c0b8"
     },
     "rjd3workspace": {
       "Package": "rjd3workspace",
@@ -3140,22 +3200,21 @@
         "rmarkdown",
         "testthat (>= 3.0.0)"
       ],
-      "Remotes": "github::rjdverse/rjd3providers@develop, github::rjdverse/rjd3toolkit@develop, github::rjdverse/rjd3tramoseats@develop, github::rjdverse/rjd3x13@develop",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
       "SystemRequirements": "Java (>= 17)",
       "Collate": "'deprecated.R' 'rjd3workspace-package.R' 'utils.R' 'saitem.R' 'saprocessing.R' 'update_path.R' 'workspace.R' 'zzz.R'",
+      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
       "RemoteType": "github",
+      "Remotes": "github::rjdverse/rjd3providers@develop, github::rjdverse/rjd3toolkit@develop, github::rjdverse/rjd3tramoseats@develop, github::rjdverse/rjd3x13@develop",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "rjd3workspace",
       "RemoteUsername": "rjdverse",
       "RemoteRef": "HEAD",
-      "RemoteSha": "53b3df3e0405c6f78beabc6392bbb095c586f550",
-      "NeedsCompilation": "no",
-      "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
-      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>"
+      "RemoteSha": "53b3df3e0405c6f78beabc6392bbb095c586f550"
     },
     "rjd3x13": {
       "Package": "rjd3x13",
@@ -3220,15 +3279,14 @@
       "Encoding": "UTF-8",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
+      "Author": "Tanguy Barthelemy [aut, cre, art], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Institut national de la statistique et des études économiques [cph] (https://www.insee.fr/), Anna Smyk [aut]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "rjdworkspace",
       "RemoteUsername": "TanguyBarthelemy",
       "RemoteRef": "HEAD",
-      "RemoteSha": "906c34d98169db13ead2dd80bdba681e3fd45d16",
-      "NeedsCompilation": "no",
-      "Author": "Tanguy Barthelemy [aut, cre, art], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Institut national de la statistique et des études économiques [cph] (https://www.insee.fr/), Anna Smyk [aut]",
-      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>"
+      "RemoteSha": "906c34d98169db13ead2dd80bdba681e3fd45d16"
     },
     "rjwsacruncher": {
       "Package": "rjwsacruncher",
@@ -4236,6 +4294,47 @@
       "Author": "Yihui Xie [aut, cre, cph] (ORCID: <https://orcid.org/0000-0003-0645-5666>, URL: https://yihui.org), Wush Wu [ctb], Daijiang Li [ctb], Xianying Tan [ctb], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Christophe Dervieux [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "RSPM"
+    },
+    "xml2": {
+      "Package": "xml2",
+      "Version": "1.4.0",
+      "Source": "Repository",
+      "Title": "Parse XML",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", email = \"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",
+      "Description": "Bindings to 'libxml2' for working with XML data using a simple,  consistent interface based on 'XPath' expressions. Also supports XML schema validation; for 'XSLT' transformations see the 'xslt' package.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://xml2.r-lib.org, https://r-lib.r-universe.dev/xml2",
+      "BugReports": "https://github.com/r-lib/xml2/issues",
+      "Depends": [
+        "R (>= 3.6.0)"
+      ],
+      "Imports": [
+        "cli",
+        "methods",
+        "rlang (>= 1.1.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "curl",
+        "httr",
+        "knitr",
+        "magrittr",
+        "mockery",
+        "rmarkdown",
+        "testthat (>= 3.2.0)",
+        "xslt"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "SystemRequirements": "libxml2: libxml2-dev (deb), libxml2-devel (rpm)",
+      "Collate": "'S4.R' 'as_list.R' 'xml_parse.R' 'as_xml_document.R' 'classes.R' 'format.R' 'import-standalone-obj-type.R' 'import-standalone-purrr.R' 'import-standalone-types-check.R' 'init.R' 'nodeset_apply.R' 'paths.R' 'utils.R' 'xml2-package.R' 'xml_attr.R' 'xml_children.R' 'xml_document.R' 'xml_find.R' 'xml_missing.R' 'xml_modify.R' 'xml_name.R' 'xml_namespaces.R' 'xml_node.R' 'xml_nodeset.R' 'xml_path.R' 'xml_schema.R' 'xml_serialize.R' 'xml_structure.R' 'xml_text.R' 'xml_type.R' 'xml_url.R' 'xml_write.R' 'zzz.R'",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut], Jim Hester [aut], Jeroen Ooms [aut, cre], Posit Software, PBC [cph, fnd], R Foundation [ctb] (Copy of R-project homepage cached as example)",
+      "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+      "Repository": "CRAN"
     },
     "xts": {
       "Package": "xts",

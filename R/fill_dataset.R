@@ -1,4 +1,6 @@
 
+options(java.parameters = "-Xmx16g")
+
 library("rjwsacruncher")
 library("rjd3toolkit")
 library("rjd3workspace")
@@ -6,14 +8,12 @@ library("rjd3providers")
 library("rjd3x13")
 library("RJDemetra")
 library("rjdworkspace")
-library("ggplot2")
 library("tidyr")
 library("tssim")
-library("plotly")
 
 source("R/utils.R")
 
-nb_tent <- 1000
+nb_tent <- 500
 this_time <- data.frame(
     nb_series = integer(nb_tent),
     cruncher_v2 = numeric(nb_tent),
@@ -31,7 +31,7 @@ for (tentative in seq_len(nb_tent)) {
     path_ws_v2 <- tempfile(fileext = ".xml") |> normalizePath(mustWork = FALSE)
     path_ws_v3 <- tempfile(fileext = ".xml") |> normalizePath(mustWork = FALSE)
 
-    nb_series <- sample(2:1000, size = 1L)
+    nb_series <- sample(2:500, size = 1L)
     cat("Nb series: ", nb_series, "\n")
     this_time[tentative, "nb_series"] <- nb_series
 
@@ -81,21 +81,8 @@ for (tentative in seq_len(nb_tent)) {
     this_time[tentative, "rjd3x13"] <- time_rjd3x13[3]
 }
 
-
-try({
-    p <- tidyr::pivot_longer(this_time, cols = -nb_series) |>
-        ggplot2::ggplot() +
-        ggplot2::geom_point(aes(x = nb_series, y = value, color = name)) +
-        theme_minimal()
-
-    # le rendre interactif
-    ggplotly(p) |>
-        layout(legend = list(itemclick = "toggleothers"))
-})
-
 # Enregistrement
-
-library(aws.s3)
+library("aws.s3")
 
 BUCKET <- "tbarthelemy"
 FILE_KEY_S3 <- "data/time.csv"

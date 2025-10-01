@@ -17,3 +17,22 @@ estimations de CVS-CJO faites par JDemetra+. On compare ici :
   (version 2)
 - le package [{rjd3x13}](https://github.com/rjdverse/rjd3x13) (version
   3)
+
+## Méthodologie
+
+On génère des séries aléatoirement avec le package
+[{tssim}](https://cran.r-project.org/web/packages/tssim/index.html) et
+on compare le temps de calcul de l’estimation du modèle CVS-CJO avec les
+différentes méthodes de JDemetra+.
+
+On cherche ici à comparer l’impact du nobre de série sur l’estimation.
+
+## Résultats
+
+Sur toutes les longueurs (de 1 à 1000) :
+
+![](README_files/figure-gfm/all_length-1.png)<!-- -->
+
+Sur moins de 100 séries :
+
+![](README_files/figure-gfm/length%20minus%20100-1.png)<!-- -->
