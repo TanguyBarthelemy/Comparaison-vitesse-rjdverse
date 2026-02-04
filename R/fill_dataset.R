@@ -31,7 +31,7 @@ for (tentative in seq_len(nb_tent)) {
     path_ws_v2 <- tempfile(fileext = ".xml") |> normalizePath(mustWork = FALSE)
     path_ws_v3 <- tempfile(fileext = ".xml") |> normalizePath(mustWork = FALSE)
 
-    nb_series <- sample(2:500, size = 1L)
+    nb_series <- sample(2:10000, size = 1L)
     cat("Nb series: ", nb_series, "\n")
     this_time[tentative, "nb_series"] <- nb_series
 

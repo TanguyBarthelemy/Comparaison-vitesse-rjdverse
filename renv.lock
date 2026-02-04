@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.5.1",
+    "Version": "4.5.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -249,9 +249,9 @@
     },
     "RProtoBuf": {
       "Package": "RProtoBuf",
-      "Version": "0.4.24",
+      "Version": "0.4.25",
       "Source": "Repository",
-      "Date": "2025-03-31",
+      "Date": "2026-01-11",
       "Authors@R": "c(person(\"Romain\", \"Francois\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Murray\", \"Stokely\", role = \"aut\", comment = c(ORCID = \"0009-0008-3390-1338\")), person(\"Jeroen\", \"Ooms\", role = \"aut\", comment = c(ORCID = \"0000-0002-4035-0289\")))",
       "Title": "R Interface to the 'Protocol Buffers' 'API' (Version 2 or 3)",
       "Description": "Protocol Buffers are a way of encoding structured data in an efficient yet extensible format. Google uses Protocol Buffers for almost all of its internal 'RPC' protocols and file formats.  Additional documentation is available in two included vignettes one of which corresponds to our 'JSS' paper (2016, <doi:10.18637/jss.v071.i02>. A sufficiently recent version of 'Protocol Buffers' library is required; currently version 3.3.0 from 2017 is the stated minimum.",
@@ -271,24 +271,28 @@
       "Suggests": [
         "tinytest"
       ],
-      "SystemRequirements": "ProtoBuf libraries and compiler version 3.3.0 or later; On Debian/Ubuntu these can be installed as libprotoc-dev, libprotobuf-dev and protobuf-compiler, while on Fedora/CentOS protobuf-devel and protobuf-compiler are needed. A C++17 compiler is required as well.",
+      "SystemRequirements": "ProtoBuf libraries and compiler version 3.3.0 or later; On Debian/Ubuntu these can be installed as libprotoc-dev, libprotobuf-dev and protobuf-compiler, while on Fedora/CentOS protobuf-devel and protobuf-compiler are needed. A modern compiler is required as well.",
       "BugReports": "https://github.com/eddelbuettel/rprotobuf/issues",
       "URL": "https://github.com/eddelbuettel/rprotobuf, https://dirk.eddelbuettel.com/code/rprotobuf.html",
       "License": "GPL (>= 2)",
+      "VignetteBuilder": "Rcpp",
       "NeedsCompilation": "yes",
-      "Author": "Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>), Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Murray Stokely [aut] (<https://orcid.org/0009-0008-3390-1338>), Jeroen Ooms [aut] (<https://orcid.org/0000-0002-4035-0289>)",
+      "Author": "Romain Francois [aut] (ORCID: <https://orcid.org/0000-0002-2444-4226>), Dirk Eddelbuettel [aut, cre] (ORCID: <https://orcid.org/0000-0001-6419-907X>), Murray Stokely [aut] (ORCID: <https://orcid.org/0009-0008-3390-1338>), Jeroen Ooms [aut] (ORCID: <https://orcid.org/0000-0002-4035-0289>)",
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
       "Repository": "RSPM",
       "Encoding": "UTF-8"
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.1.0",
+      "Version": "1.1.1",
       "Source": "Repository",
       "Title": "Seamless R and C++ Integration",
-      "Date": "2025-07-01",
+      "Date": "2026-01-07",
       "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Romain\", \"Francois\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"JJ\", \"Allaire\", role = \"aut\", comment = c(ORCID = \"0000-0003-0174-9868\")), person(\"Kevin\", \"Ushey\", role = \"aut\", comment = c(ORCID = \"0000-0003-2880-7407\")), person(\"Qiang\", \"Kou\", role = \"aut\", comment = c(ORCID = \"0000-0001-6786-5453\")), person(\"Nathan\", \"Russell\", role = \"aut\"), person(\"Iñaki\", \"Ucar\", role = \"aut\", comment = c(ORCID = \"0000-0001-6403-5550\")), person(\"Doug\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"John\", \"Chambers\", role = \"aut\"))",
       "Description": "The 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++. Many R data types and objects can be mapped back and forth to C++ equivalents which facilitates both writing of new code as well as easier integration of third-party libraries. Documentation about 'Rcpp' is provided by several vignettes included in this package, via the 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013, <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018, <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
+      "Depends": [
+        "R (>= 3.5.0)"
+      ],
       "Imports": [
         "methods",
         "utils"
@@ -305,6 +309,7 @@
       "MailingList": "rcpp-devel@lists.r-forge.r-project.org",
       "RoxygenNote": "6.1.1",
       "Encoding": "UTF-8",
+      "VignetteBuilder": "Rcpp",
       "NeedsCompilation": "yes",
       "Author": "Dirk Eddelbuettel [aut, cre] (ORCID: <https://orcid.org/0000-0001-6419-907X>), Romain Francois [aut] (ORCID: <https://orcid.org/0000-0002-2444-4226>), JJ Allaire [aut] (ORCID: <https://orcid.org/0000-0003-0174-9868>), Kevin Ushey [aut] (ORCID: <https://orcid.org/0000-0003-2880-7407>), Qiang Kou [aut] (ORCID: <https://orcid.org/0000-0001-6786-5453>), Nathan Russell [aut], Iñaki Ucar [aut] (ORCID: <https://orcid.org/0000-0001-6403-5550>), Doug Bates [aut] (ORCID: <https://orcid.org/0000-0001-8316-9503>), John Chambers [aut]",
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
@@ -663,7 +668,8 @@
       "License": "Unlimited",
       "NeedsCompilation": "no",
       "Author": "Angelo Canty [aut] (author of original code for S), Brian Ripley [aut, trl] (conversion to R, maintainer 1999--2022, author of parallel support), Alessandra R. Brazzale [ctb, cre] (minor bug fixes)",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "bslib": {
       "Package": "bslib",
@@ -752,7 +758,7 @@
     },
     "checkmate": {
       "Package": "checkmate",
-      "Version": "2.3.3",
+      "Version": "2.3.4",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Fast and Versatile Argument Checks",
@@ -787,7 +793,7 @@
       ],
       "License": "BSD_3_clause + file LICENSE",
       "VignetteBuilder": "knitr",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Collate": "'AssertCollection.R' 'allMissing.R' 'anyInfinite.R' 'anyMissing.R' 'anyNaN.R' 'asInteger.R' 'assert.R' 'helper.R' 'makeExpectation.R' 'makeTest.R' 'makeAssertion.R' 'checkAccess.R' 'checkArray.R' 'checkAtomic.R' 'checkAtomicVector.R' 'checkCharacter.R' 'checkChoice.R' 'checkClass.R' 'checkComplex.R' 'checkCount.R' 'checkDataFrame.R' 'checkDataTable.R' 'checkDate.R' 'checkDirectoryExists.R' 'checkDisjunct.R' 'checkDouble.R' 'checkEnvironment.R' 'checkFALSE.R' 'checkFactor.R' 'checkFileExists.R' 'checkFlag.R' 'checkFormula.R' 'checkFunction.R' 'checkInt.R' 'checkInteger.R' 'checkIntegerish.R' 'checkList.R' 'checkLogical.R' 'checkMatrix.R' 'checkMultiClass.R' 'checkNamed.R' 'checkNames.R' 'checkNull.R' 'checkNumber.R' 'checkNumeric.R' 'checkOS.R' 'checkPOSIXct.R' 'checkPathForOutput.R' 'checkPermutation.R' 'checkR6.R' 'checkRaw.R' 'checkScalar.R' 'checkScalarNA.R' 'checkSetEqual.R' 'checkString.R' 'checkSubset.R' 'checkTRUE.R' 'checkTibble.R' 'checkVector.R' 'coalesce.R' 'isIntegerish.R' 'matchArg.R' 'qassert.R' 'qassertr.R' 'vname.R' 'wfwl.R' 'zzz.R'",
       "Author": "Michel Lang [cre, aut] (ORCID: <https://orcid.org/0000-0001-9754-0393>), Bernd Bischl [ctb], Dénes Tóth [ctb] (ORCID: <https://orcid.org/0000-0003-4262-3217>)",
       "Maintainer": "Michel Lang <michellang@gmail.com>",
@@ -2200,8 +2206,7 @@
       "NeedsCompilation": "yes",
       "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>), Felix Andrews [ctb], Kevin Wright [ctb] (documentation), Neil Klepeis [ctb], Johan Larsson [ctb] (miscellaneous improvements), Zhijian (Jason) Wen [cph] (filled contour code), Paul Murrell [ctb], Stefan Eng [ctb] (violin plot improvements), Achim Zeileis [ctb] (modern colors), Alexandre Courtiol [ctb] (generics for larrows, lpolygon, lrect and lsegments)",
       "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Repository": "CRAN"
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -2501,8 +2506,7 @@
       "NeedsCompilation": "yes",
       "Author": "Brian Ripley [aut, cre, cph], William Venables [cph]",
       "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Repository": "CRAN"
     },
     "openssl": {
       "Package": "openssl",
@@ -2884,11 +2888,12 @@
     },
     "rJava": {
       "Package": "rJava",
-      "Version": "1.0-11",
+      "Version": "1.0-14",
       "Source": "Repository",
       "Title": "Low-Level R to Java Interface",
-      "Author": "Simon Urbanek <simon.urbanek@r-project.org>",
-      "Maintainer": "Simon Urbanek <simon.urbanek@r-project.org>",
+      "Author": "Simon Urbanek [aut, cre, cph] (https://urbanek.nz, ORCID: <https://orcid.org/0000-0003-2297-1732>)",
+      "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+      "Authors@R": "person(\"Simon\", \"Urbanek\", role=c(\"aut\",\"cre\",\"cph\"), email=\"Simon.Urbanek@r-project.org\", comment=c(\"https://urbanek.nz\", ORCID=\"0000-0003-2297-1732\"))",
       "Depends": [
         "R (>= 3.6.0)",
         "methods"
@@ -3065,15 +3070,36 @@
       "NeedsCompilation": "yes",
       "Repository": "RSPM"
     },
+    "rjd3jars": {
+      "Package": "rjd3jars",
+      "Version": "0.0.1",
+      "Source": "Repository",
+      "Title": "External jars for 'rjdverse' R Packages",
+      "Authors@R": "person(given = \"Tanguy\",  family = \"Barthelemy\", role = c(\"aut\", \"cre\"), email =\"tanguy.barthelemy@insee.fr\")",
+      "Description": "It provides external jars required for the 'rjdverse' (as 'rjd3toolkit', 'rjd3x13' and 'rjd3tramoseats').",
+      "Depends": [
+        "R (>= 4.1)"
+      ],
+      "Imports": [
+        "rJava (>= 1.0-6)"
+      ],
+      "License": "EUPL",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "NeedsCompilation": "no",
+      "Author": "Tanguy Barthelemy [aut, cre]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
+      "Repository": "CRAN"
+    },
     "rjd3providers": {
       "Package": "rjd3providers",
-      "Version": "3.5.1.9000",
+      "Version": "3.6.0",
       "Source": "GitHub",
       "Type": "Package",
-      "Title": "Interface to 'JDemetra+ 3.x' time series analysis software",
-      "Authors@R": "c( person(\"Jean\", \"Palate\", , \"jean.palate@nbb.be\", role = \"aut\"), person(\"Alessandro\", \"Piovani\", , \"alessandro.piovani@istat.it\", role = c(\"aut\", \"cre\")), person(\"Tanguy\", \"Barthelemy\", , \"tanguy.barthelemy@insee.fr\", role = c(\"ctb\", \"art\")) )",
-      "Description": "Interface to 'JDemetra+ 3.x' (<https://github.com/jdemetra>) time series analysis software. It offers full access to txt, csv, xml and spreadsheets files which are meant to be read by JDemetra+ Graphical User Interface.",
-      "License": "file LICENSE",
+      "Title": "Interface to 'JDemetra+' 3.x Time Series Analysis Software",
+      "Authors@R": "c( person(\"Jean\", \"Palate\", , \"jean.palate@nbb.be\", role = \"aut\"), person(\"Alessandro\", \"Piovani\", , \"alessandro.piovani@istat.it\", role = c(\"aut\")), person(\"Tanguy\", \"Barthelemy\", , \"tanguy.barthelemy@insee.fr\", role = c(\"ctb\", \"art\", \"cre\")) )",
+      "Description": "Interface to 'JDemetra+' 3.x (<https://github.com/jdemetra>) time series analysis software. It offers full access to txt, csv, xml and spreadsheets files which are meant to be read by 'JDemetra+' Graphical User Interface.",
+      "License": "EUPL",
       "URL": "https://github.com/rjdverse/rjd3providers, https://rjdverse.github.io/rjd3providers/",
       "BugReports": "https://github.com/rjdverse/rjd3providers/issues",
       "Depends": [
@@ -3081,72 +3107,67 @@
       ],
       "Imports": [
         "rJava (>= 1.0-6)",
-        "rjd3toolkit (>= 3.5.1)"
+        "rjd3toolkit (>= 3.6.0)",
+        "rjd3jars"
       ],
       "Encoding": "UTF-8",
-      "LazyData": "TRUE",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "SystemRequirements": "Java (>= 17)",
       "Collate": "'deprecated.R' 'providers.R' 'jd3spreadsheet.R' 'jd3txt.R' 'jd3xml.R' 'zzz.R'",
-      "Author": "Jean Palate [aut], Alessandro Piovani [aut, cre], Tanguy Barthelemy [ctb, art]",
-      "Maintainer": "Alessandro Piovani <alessandro.piovani@istat.it>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "rjdverse",
       "RemoteRepo": "rjd3providers",
-      "RemoteRef": "develop",
-      "RemoteSha": "e7d0e07a8e7397ee342f12913a297072463d2353",
-      "Remotes": "github::rjdverse/rjd3toolkit@develop"
+      "RemoteUsername": "rjdverse",
+      "RemoteRef": "CRAN",
+      "RemoteSha": "6adabe9ca315a5267a3179060c0f13b023a5da00",
+      "NeedsCompilation": "no",
+      "Author": "Jean Palate [aut], Alessandro Piovani [aut], Tanguy Barthelemy [ctb, art, cre]",
+      "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>"
     },
     "rjd3toolkit": {
       "Package": "rjd3toolkit",
-      "Version": "3.5.2",
-      "Source": "GitHub",
+      "Version": "3.6.0",
+      "Source": "Repository",
       "Type": "Package",
       "Title": "Utility Functions Around 'JDemetra+ 3.0'",
-      "Authors@R": "c( person(given = \"Jean\",  family = \"Palate\", role = c(\"aut\"), email = \"palatejean@gmail.com\"), person(given = \"Alain\",  family = \"Quartier-la-Tente\", role = c(\"aut\"), email = \"alain.quartier@yahoo.fr\", comment = c(ORCID = \"0000-0001-7890-3857\")), person(given = \"Tanguy\",  family = \"Barthelemy\", role = c(\"aut\", \"cre\", \"art\"), email =\"tanguy.barthelemy@insee.fr\"), person(given = \"Anna\",  family = \"Smyk\", role = c(\"aut\"), email =\"anna.smyk@insee.fr\") )",
-      "Description": "R Interface to 'JDemetra+ 3.x' (<https://github.com/jdemetra>) time series analysis software. It provides functions allowing to model time series (create outlier regressors, user-defined calendar regressors, UCARIMA models...), to test the presence of trading days or seasonal effects and also to set specifications in pre-adjustment and benchmarking when using 'rjd3x13' or 'rjd3tramoseats'.",
+      "Authors@R": "c( person(\"Jean\", \"Palate\", , \"palatejean@gmail.com\", role = \"aut\"), person(\"Alain\", \"Quartier-la-Tente\", , \"alain.quartier@yahoo.fr\", role = \"aut\", comment = c(ORCID = \"0000-0001-7890-3857\")), person(\"Tanguy\", \"Barthelemy\", , \"tanguy.barthelemy@insee.fr\", role = c(\"aut\", \"cre\", \"art\")), person(\"Anna\", \"Smyk\", , \"anna.smyk@insee.fr\", role = \"aut\") )",
+      "Description": "R Interface to 'JDemetra+ 3.x' (<https://github.com/jdemetra>) time series analysis software.  It provides functions allowing to model time series (create outlier regressors, user-defined calendar regressors, Unobserved Components AutoRegressive Integrated Moving Average (UCARIMA) models...), to test the presence of trading days or seasonal effects and also to set specifications in pre-adjustment and benchmarking when using 'rjd3x13' or 'rjd3tramoseats'.",
+      "License": "EUPL",
+      "URL": "https://github.com/rjdverse/rjd3toolkit, https://rjdverse.github.io/rjd3toolkit/",
+      "BugReports": "https://github.com/rjdverse/rjd3toolkit/issues",
       "Depends": [
         "R (>= 4.1)"
       ],
       "Imports": [
-        "RProtoBuf (>= 0.4.20)",
-        "rJava (>= 1.0-6)",
         "checkmate",
-        "methods"
+        "graphics",
+        "methods",
+        "rJava (>= 1.0-6)",
+        "rjd3jars",
+        "RProtoBuf (>= 0.4.20)",
+        "stats",
+        "utils"
       ],
-      "SystemRequirements": "Java (>= 17)",
-      "License": "EUPL",
-      "URL": "https://github.com/rjdverse/rjd3toolkit, https://rjdverse.github.io/rjd3toolkit/",
-      "LazyData": "TRUE",
-      "Suggests": [
-        "knitr",
-        "rmarkdown"
-      ],
-      "RoxygenNote": "7.3.2",
-      "Roxygen": "list(markdown = TRUE)",
-      "BugReports": "https://github.com/rjdverse/rjd3toolkit/issues",
       "Encoding": "UTF-8",
-      "Collate": "'utils.R' 'jd2r.R' 'protobuf.R' 'arima.R' 'calendars.R' 'calendarts.R' 'decomposition.R' 'differencing.R' 'display.R' 'distributions.R' 'generics.R' 'jd3rslts.R' 'modellingcontext.R' 'procresults.R' 'regarima_generic.R' 'regarima_rslts.R' 'spec_benchmarking.R' 'spec_regarima.R' 'splines.R' 'tests_regular.R' 'tests_seasonality.R' 'tests_td.R' 'timeseries.R' 'variables.R' 'zzz.R'",
       "Language": "en-GB",
+      "LazyData": "TRUE",
+      "RoxygenNote": "7.3.3",
+      "SystemRequirements": "Java (>= 17)",
+      "Collate": "'utils.R' 'jd2r.R' 'protobuf.R' 'arima.R' 'calendars.R' 'calendarts.R' 'decomposition.R' 'deprecated.R' 'differencing.R' 'display.R' 'distributions.R' 'generics.R' 'jd3rslts.R' 'modellingcontext.R' 'procresults.R' 'regarima_generic.R' 'regarima_rslts.R' 'spec_benchmarking.R' 'spec_regarima.R' 'splines.R' 'tests_regular.R' 'tests_seasonality.R' 'tests_td.R' 'timeseries.R' 'variables.R' 'zzz.R'",
+      "NeedsCompilation": "no",
       "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
       "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "rjdverse",
-      "RemoteRepo": "rjd3toolkit",
-      "RemoteRef": "develop",
-      "RemoteSha": "178a2e399100d8f121a98f57ace8130363a7749c"
+      "Repository": "CRAN"
     },
     "rjd3tramoseats": {
       "Package": "rjd3tramoseats",
-      "Version": "3.5.2.9000",
-      "Source": "GitHub",
+      "Version": "3.6.0",
+      "Source": "Repository",
       "Type": "Package",
-      "Title": "Seasonal Adjustment with TRAMO-SEATS in 'JDemetra+ 3.x'",
+      "Title": "Seasonal Adjustment with TRAMO-SEATS in 'JDemetra+' 3.x",
       "Authors@R": "c( person(\"Jean\", \"Palate\", , \"palatejean@gmail.com\", role = \"aut\"), person(\"Alain\", \"Quartier-la-Tente\", , \"alain.quartier@yahoo.fr\", role = \"aut\", comment = c(ORCID = \"0000-0001-7890-3857\")), person(\"Tanguy\", \"Barthelemy\", , \"tanguy.barthelemy@insee.fr\", role = c(\"aut\", \"cre\", \"art\")), person(\"Anna\", \"Smyk\", , \"anna.smyk@insee.fr\", role = \"aut\") )",
-      "Description": "R Interface to 'JDemetra+ 3.x' (<https://github.com/jdemetra>) time series analysis software.  It offers full acces to options and outputs of TRAMO-SEATS (Time series Regression with ARIMA noise, Missing values and Outliers - Signal Extraction in ARIMA Time Series), including TRAMO modelling (automatic ARIMA model with outlier detection and trading days adjustment).",
-      "License": "file LICENSE",
+      "Description": "Interface to 'JDemetra+' 3.x (<https://github.com/jdemetra>) time series analysis software.  It offers full access to options and outputs of 'TRAMO-SEATS' (Time series Regression with ARIMA noise, Missing values and Outliers - Signal Extraction in ARIMA Time Series), including 'TRAMO' modelling (ARIMA model with outlier detection and trading days adjustment). ARIMA = AutoRegressive Integrated Moving Average.",
+      "License": "EUPL",
       "URL": "https://github.com/rjdverse/rjd3tramoseats, https://rjdverse.github.io/rjd3tramoseats/",
       "BugReports": "https://github.com/rjdverse/rjd3tramoseats/issues",
       "Depends": [
@@ -3154,23 +3175,24 @@
       ],
       "Imports": [
         "rJava (>= 1.0-6)",
-        "rjd3toolkit (>= 3.5.1)",
-        "RProtoBuf (>= 0.4.20)"
+        "rjd3jars",
+        "rjd3toolkit (>= 3.6.0)",
+        "RProtoBuf (>= 0.4.20)",
+        "stats",
+        "utils"
       ],
       "Encoding": "UTF-8",
-      "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "SystemRequirements": "Java (>= 17)",
-      "Collate": "'deprecated.R' 'print.R' 'utils.R' 'tramoseats_rslts.R' 'tramoseats_spec.R' 'revisions.R' 'seats.R' 'seats_spec.R' 'tramo_generic.R' 'tramo_outliers.R' 'tramo_spec.R' 'tramoseats.R' 'ud_var.R' 'zzz.R'",
+      "Collate": "'deprecated.R' 'print.R' 'utils.R' 'tramoseats_rslts.R' 'tramoseats_spec.R' 'revisions.R' 'seats.R' 'seats_spec.R' 'tramo_generic.R' 'tramo_outliers.R' 'tramo_spec.R' 'tramoseats.R' 'zzz.R'",
+      "Suggests": [
+        "spelling"
+      ],
+      "Language": "en-US",
+      "NeedsCompilation": "no",
       "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
       "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
-      "RemoteType": "github",
-      "Remotes": "github::rjdverse/rjd3toolkit@develop",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "rjd3tramoseats",
-      "RemoteUsername": "rjdverse",
-      "RemoteRef": "develop",
-      "RemoteSha": "be6bde6c877301e4c405436d86afa5895b67c0b8"
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "rjd3workspace": {
       "Package": "rjd3workspace",
@@ -3218,13 +3240,13 @@
     },
     "rjd3x13": {
       "Package": "rjd3x13",
-      "Version": "3.5.1.9000",
-      "Source": "GitHub",
+      "Version": "3.6.0",
+      "Source": "Repository",
       "Type": "Package",
       "Title": "Seasonal Adjustment with X-13 in 'JDemetra+ 3.x'",
       "Authors@R": "c( person(\"Jean\", \"Palate\", , \"palatejean@gmail.com\", role = \"aut\"), person(\"Alain\", \"Quartier-la-Tente\", , \"alain.quartier@yahoo.fr\", role = \"aut\", comment = c(ORCID = \"0000-0001-7890-3857\")), person(\"Tanguy\", \"Barthelemy\", , \"tanguy.barthelemy@insee.fr\", role = c(\"aut\", \"cre\", \"art\")), person(\"Anna\", \"Smyk\", , \"anna.smyk@insee.fr\", role = \"aut\") )",
-      "Description": "R Interface to 'JDemetra+ 3.x' (<https://github.com/jdemetra>) time series analysis software.  It offers full acces to options and outputs of X-13, including RegARIMA modelling (automatic ARIMA model with outlier detection and trading days adjustment) and X-11 decomposition.",
-      "License": "file LICENSE",
+      "Description": "R Interface to 'JDemetra+ 3.x' (<https://github.com/jdemetra>) time series analysis software.  It offers full access to options and outputs of 'X-13', including Reg-ARIMA modelling (automatic AutoRegressive Integrated Moving Average (ARIMA) model  with outlier detection and trading days adjustment) and X-11 decomposition.",
+      "License": "EUPL",
       "URL": "https://github.com/rjdverse/rjd3x13, https://rjdverse.github.io/rjd3x13/",
       "BugReports": "https://github.com/rjdverse/rjd3x13/issues",
       "Depends": [
@@ -3232,23 +3254,18 @@
       ],
       "Imports": [
         "rJava (>= 1.0-6)",
-        "rjd3toolkit (>= 3.5.1)",
-        "RProtoBuf (>= 0.4.17)"
+        "RProtoBuf (>= 0.4.20)",
+        "rjd3toolkit (>= 3.6.0)",
+        "rjd3jars"
       ],
       "Encoding": "UTF-8",
-      "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "SystemRequirements": "Java (>= 17)",
       "Collate": "'deprecated.R' 'print.R' 'regarima_generic.R' 'utils.R' 'regarima_outliers.R' 'regarima_spec.R' 'x13_rslts.R' 'x13_spec.R' 'revisions.R' 'set_x11_spec.R' 'udvar.R' 'x13.R' 'zzz.R'",
+      "NeedsCompilation": "no",
       "Author": "Jean Palate [aut], Alain Quartier-la-Tente [aut] (ORCID: <https://orcid.org/0000-0001-7890-3857>), Tanguy Barthelemy [aut, cre, art], Anna Smyk [aut]",
       "Maintainer": "Tanguy Barthelemy <tanguy.barthelemy@insee.fr>",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "rjdverse",
-      "RemoteRepo": "rjd3x13",
-      "RemoteRef": "develop",
-      "RemoteSha": "9ce41abfc3e1292297a5e37f8a57c3fc696c7d2e",
-      "Remotes": "github::rjdverse/rjd3toolkit@develop"
+      "Repository": "CRAN"
     },
     "rjdworkspace": {
       "Package": "rjdworkspace",
