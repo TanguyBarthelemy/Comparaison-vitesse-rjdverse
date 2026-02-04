@@ -1,25 +1,37 @@
+#!/bin/sh
 
-sudo apt-get update -y
-sudo apt-get install -y protobuf-compiler libprotobuf-dev libprotoc-dev
-sudo apt-get install -y unzip
-sudo apt install -y openjdk-21-jdk
+echo "v1.16"
 
-mkdir ~/work/software
+echo "Changing ownership of init_dir..."
+init_dir="/home/onyxia/.cache/init"
+mkdir -p "${init_dir}"
+chown -R onyxia:users "${init_dir}"
+cd ${init_dir}
+echo "init_dir ready - OK"
 
-curl -Lo ~/work/software/jwsacruncher-3.5.1.zip https://github.com/jdemetra/jdplus-main/releases/download/v3.5.1/jwsacruncher-standalone-3.5.1-linux-x86_64.zip
-curl -Lo ~/work/software/jwsacruncher-2.2.6.zip https://github.com/jdemetra/jwsacruncher/releases/download/v2.2.6/jwsacruncher-2.2.6-bin.zip
-curl -Lo ~/work/software/install.R https://raw.githubusercontent.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse/refs/heads/main/R/install.R
 
-unzip -o ~/work/software/jwsacruncher-3.5.1.zip -d ~/work/software/
-unzip -o ~/work/software/jwsacruncher-2.2.6.zip -d ~/work/software/
+echo "Downloading the bash files..."
+curl -fsSL -O "https://raw.githubusercontent.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse/refs/heads/main/R/install.R"
+curl -fsSL -O "https://raw.githubusercontent.com/TanguyBarthelemy/onyxia-setup/refs/heads/main/library/setup-cruncher.sh"
+curl -fsSL -O "https://raw.githubusercontent.com/TanguyBarthelemy/onyxia-setup/refs/heads/main/init-rproject.sh"
+echo "Dowloading is complete - OK"
 
-chmod +rwx ~/work/software/jwsacruncher-3.5.1/bin/jwsacruncher
-chmod +rwx ~/work/software/jwsacruncher-2.2.6/bin/jwsacruncher
-chmod +rwx ~/work/software/install.R
 
-Rscript ~/work/software/install.R
+echo "Changing the ownership..."
+chmod +x "install.R"
+chmod +x "setup-cruncher.sh"
+chmod +x "init-rproject.sh"
+echo "Changed the ownership - OK"
 
-PROJECT_DIR=~/work/Comparaison-vitesse-rjdverse
-git clone https://github.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse.git $PROJECT_DIR
-chown -R onyxia:users $PROJECT_DIR/
-cd $PROJECT_DIR
+
+echo "Setting up cruncher..."
+"./setup-cruncher.sh"
+echo "Env setup - OK"
+
+echo "Setting up project..."
+"./init-rproject.sh" TanguyBarthelemy Comparaison-vitesse-rjdverse
+echo "R project setup - OK"
+
+echo "Installation R packages..."
+Rscript ./install.R
+echo "R installation setup - OK"
