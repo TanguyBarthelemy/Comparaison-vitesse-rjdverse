@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![Onyxia](https://img.shields.io/badge/Launch-Datalab-orange?logo=R)](https://datalab.sspcloud.fr/launcher/ide/rstudio?autoLaunch=true&onyxia.friendlyName=%C2%ABCompare-JDemetra%C2%BB&service.image.custom.enabled=true&service.image.pullPolicy=%C2%ABAlways%C2%BB&init.personalInit=%C2%ABhttps://raw.githubusercontent.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse/refs/heads/main/setup.sh%C2%BB)
+[![Onyxia](https://img.shields.io/badge/Launch-Datalab-orange?logo=R)](https://datalab.sspcloud.fr/launcher/ide/rstudio?onyxia.friendlyName=«Compare-JDemetra»&version=2.3.18&s3=region-79669f20&autoLaunch=true&init.personalInit=«https://raw.githubusercontent.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse/refs/heads/main/setup.sh»&vault.secret=«PAT»)
 <!-- badges: end -->
 
 Ce dépôt contient des programmes de comparaison de vitesse entre les
