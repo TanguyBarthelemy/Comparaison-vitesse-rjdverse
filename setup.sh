@@ -11,14 +11,12 @@ echo "init_dir ready - OK"
 
 
 echo "Downloading the bash files..."
-curl -fsSL -O "https://raw.githubusercontent.com/TanguyBarthelemy/Comparaison-vitesse-rjdverse/refs/heads/main/renv.lock"
 curl -fsSL -O "https://raw.githubusercontent.com/TanguyBarthelemy/onyxia-setup/refs/heads/main/library/setup-cruncher.sh"
 curl -fsSL -O "https://raw.githubusercontent.com/TanguyBarthelemy/onyxia-setup/refs/heads/main/init-rproject.sh"
 echo "Dowloading is complete - OK"
 
 
 echo "Changing the ownership..."
-chmod +x "renv.lock"
 chmod +x "setup-cruncher.sh"
 chmod +x "init-rproject.sh"
 echo "Changed the ownership - OK"
@@ -31,7 +29,3 @@ echo "Env setup - OK"
 echo "Setting up project..."
 "./init-rproject.sh" TanguyBarthelemy Comparaison-vitesse-rjdverse
 echo "R project setup - OK"
-
-echo "Installation R packages..."
-Rscript -e "renv::restore(lockfile = 'renv.lock', library = file.path(Sys.getenv('HOME'), 'renv', 'library'), prompt = FALSE)"
-echo "R packages installation setup - OK"
