@@ -38,7 +38,7 @@ for (tentative in seq_len(nb_tent)) {
     this_time[tentative, "nb_series"] <- nb_series
 
     data <- create_data(nb_series = nb_series, nb_years = nb_years)
-    data_ts <- ts(data[, -1], start = 2000, freq = 12)
+    data_ts <- ts(data[, -1], start = 2000, frequency = 12)
     TBox::write_data(data, path_data)
 
     # Préparation du WS v3
@@ -66,7 +66,7 @@ for (tentative in seq_len(nb_tent)) {
     rjdworkspace::update_path(ws_xml_path = path_ws_v2, raw_data_path = path_data, verbose = FALSE)
 
     cat("Coup de cruncher v3\n")
-    time_cruncher_v3 <- call_cruncher(path_ws_v3, normalizePath("~/work/software/jwsacruncher-3.5.1/bin/"), v3 = TRUE)
+    time_cruncher_v3 <- call_cruncher(path_ws_v3, normalizePath("~/work/software/jwsacruncher-3.6.0/bin/"), v3 = TRUE)
 
     cat("Coup de cruncher v2\n")
     time_cruncher_v2 <- call_cruncher(path_ws_v2, normalizePath("~/work/software/jwsacruncher-2.2.6/bin/"), v3 = TRUE)

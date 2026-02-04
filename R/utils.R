@@ -9,7 +9,7 @@ create_data <- function(nb_series = 10, nb_years = 12) {
     return(series)
 }
 
-call_cruncher <- function(path_ws, cruncher_bin_directory = normalizePath("./jwsacruncher-3.5.1/bin/"), v3 = TRUE) {
+call_cruncher <- function(path_ws, cruncher_bin_directory = normalizePath("./jwsacruncher-3.6.0/bin/"), v3 = TRUE) {
     options(
         v3 = v3,
         is_cruncher_v3 = v3,
