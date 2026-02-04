@@ -1,9 +1,9 @@
 
-create_data <- function(n = 10) {
-    series <- lapply(seq_len(n), \(k) as.numeric(tssim::sim_monthly(12)[, 1]))
-    names(series) <- sapply(seq_len(n), \(k) paste0(sample(letters, size = 5, replace = TRUE), collapse = ""))
+create_data <- function(nb_series = 10, nb_years = 12) {
+    series <- lapply(seq_len(nb_series), \(k) as.numeric(tssim::sim_monthly(nb_years)[, 1]))
+    names(series) <- sapply(seq_len(nb_series), \(k) paste0(sample(letters, size = 5, replace = TRUE), collapse = ""))
     series <- data.frame(
-        date = seq.Date(from = as.Date("2000-01-01"), length.out = 144, by = "month"),
+        date = seq.Date(from = as.Date("2000-01-01"), length.out = nb_years * 12, by = "month"),
         series
     )
     return(series)

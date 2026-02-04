@@ -14,8 +14,10 @@ library("tssim")
 source("R/utils.R")
 
 nb_tent <- 500
+nb_years <- 12
 this_time <- data.frame(
     nb_series = integer(nb_tent),
+    nb_years = rep(nb_years, nb_tent),
     cruncher_v2 = numeric(nb_tent),
     cruncher_v3 = numeric(nb_tent),
     RJDemetra = numeric(nb_tent),
@@ -35,7 +37,7 @@ for (tentative in seq_len(nb_tent)) {
     cat("Nb series: ", nb_series, "\n")
     this_time[tentative, "nb_series"] <- nb_series
 
-    data <- create_data(n = nb_series)
+    data <- create_data(nb_series = nb_series, nb_years = nb_years)
     data_ts <- ts(data[, -1], start = 2000, freq = 12)
     TBox::write_data(data, path_data)
 
