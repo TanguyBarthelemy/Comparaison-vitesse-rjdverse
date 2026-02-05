@@ -1,7 +1,13 @@
 
 create_data <- function(nb_series = 10, nb_years = 12) {
-    series <- lapply(seq_len(nb_series), \(k) as.numeric(tssim::sim_monthly(nb_years)[, 1]))
-    names(series) <- sapply(seq_len(nb_series), \(k) paste0(sample(letters, size = 5, replace = TRUE), collapse = ""))
+    series <- lapply(
+        X = seq_len(nb_series),
+        FUN = \(k) as.numeric(tssim::sim_monthly(nb_years)[, 1])
+    )
+    names(series) <- sapply(
+        X = seq_len(nb_series),
+        FUN = \(k) paste0(sample(letters, size = 5, replace = TRUE), collapse = "")
+    )
     series <- data.frame(
         date = seq.Date(from = as.Date("2000-01-01"), length.out = nb_years * 12, by = "month"),
         series

@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
 library("ggplot2")
 library("plotly")
 library("dplyr")
+library("aws.s3")
 ```
 
 # Comparaison-vitesse-rjdverse
@@ -38,7 +39,15 @@ On cherche ici à comparer l'impact du nobre de série sur l'estimation.
 ## Résultats
 
 ```{r create_data, eval = TRUE, echo = FALSE}
-time_total <- TBox::get_data("output/time.csv")
+BUCKET <- "tbarthelemy"
+FILE_KEY_S3 <- "Compare-time-rjdverse/output/time.csv"
+
+time_total <- aws.s3::s3read_using(
+    FUN = TBox::get_data,
+    object = FILE_KEY_S3,
+    bucket = BUCKET,
+    opts = list("region" = "")
+)
 
 mod_rjd3x13 <- lm(rjd3x13 ~ nb_series, data = time_total)
 mod_RJDemetra <- lm(RJDemetra ~ nb_series, data = time_total)
@@ -50,20 +59,20 @@ df <- tidyr::pivot_longer(time_total, cols = -nb_series, values_to = "time") |>
 df <- rbind(
     df,
     data.frame(
-        nb_series = rep(1:1000, times = 4),
-        name = rep(c("rjd3x13", "RJDemetra", "cruncher_v2", "cruncher_v3"), each = 1000),
+        nb_series = rep(seq_len(10000), times = 4),
+        name = rep(c("rjd3x13", "RJDemetra", "cruncher_v2", "cruncher_v3"), each = 10000),
         time = c(
-            predict(mod_rjd3x13, newdata = data.frame(nb_series = 1:1000)),
-            predict(mod_RJDemetra, newdata = data.frame(nb_series = 1:1000)),
-            predict(mod_cruncher_v2, newdata = data.frame(nb_series = 1:1000)),
-            predict(mod_cruncher_v3, newdata = data.frame(nb_series = 1:1000))
+            predict(mod_rjd3x13, newdata = data.frame(nb_series = seq_len(10000))),
+            predict(mod_RJDemetra, newdata = data.frame(nb_series = seq_len(10000))),
+            predict(mod_cruncher_v2, newdata = data.frame(nb_series = seq_len(10000))),
+            predict(mod_cruncher_v3, newdata = data.frame(nb_series = seq_len(10000)))
         ),
         type  = "pred"
     )
 )
 ```
 
-Sur toutes les longueurs (de 1 à 1000) :
+Sur toutes les longueurs (de 1 à 10000) :
 
 ```{r all_length, eval = TRUE, echo = FALSE}
 df |>

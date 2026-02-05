@@ -3,3 +3,6 @@ install.packages(c("RJDemetra", "rjwsacruncher", "TBox", "tssim", "remotes", "gg
 
 remotes::install_github("rjdverse/rjd3providers")
 remotes::install_github("rjdverse/rjd3workspace")
+
+system("mc cp -recursive s3/tbarthelemy/Compare-time-rjdverse/data .")
+system("mc cp -recursive s3/tbarthelemy/Compare-time-rjdverse/WS .")
