@@ -111,8 +111,8 @@ new_time_total <- rbind(time_total, this_time)
 aws.s3::s3write_using(
     new_time_total,
     FUN = TBox::write_data,
-    object = FILE_KEY_OUT_S3,
-    bucket = BUCKET_OUT,
+    object = FILE_KEY_S3,
+    bucket = BUCKET,
     opts = list("region" = "")
 )
 
@@ -122,6 +122,6 @@ aws.s3::s3write_using(
     this_time,
     FUN = TBox::write_data,
     object = FILE_KEY_OUT_S3,
-    bucket = BUCKET_OUT,
+    bucket = BUCKET,
     opts = list("region" = "")
 )
