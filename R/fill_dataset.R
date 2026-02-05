@@ -13,8 +13,8 @@ library("tssim")
 
 source("R/utils.R")
 
-nb_tent <- 5
-nb_years <- 12
+nb_tent <- 1500
+nb_years <- 5
 this_time <- data.frame(
     nb_series = integer(nb_tent),
     nb_years = rep(nb_years, nb_tent),
@@ -37,7 +37,7 @@ for (tentative in seq_len(nb_tent)) {
     path_ws_v2 <- tempfile(fileext = ".xml") |> normalizePath(mustWork = FALSE)
     path_ws_v3 <- tempfile(fileext = ".xml") |> normalizePath(mustWork = FALSE)
 
-    nb_series <- sample(2:100, size = 1L)
+    nb_series <- sample(2:10000, size = 1L)
     cat("Nb series: ", nb_series, "\n")
     this_time[tentative, "nb_series"] <- nb_series
 
