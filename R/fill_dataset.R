@@ -11,8 +11,8 @@ library("tssim")
 
 source("R/utils.R")
 
-nb_tent <- 2L
-nb_bench <- 2L
+nb_tent <- 20L
+nb_bench <- 8L
 big_data <- TBox::get_data(path = "data/data_10000.csv")
 big_data$date <- as.Date(big_data$date)
 
