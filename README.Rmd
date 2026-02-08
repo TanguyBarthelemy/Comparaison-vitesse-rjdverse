@@ -6,8 +6,8 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+    collapse = TRUE,
+    comment = "#>"
 )
 library("ggplot2")
 library("plotly")
@@ -46,28 +46,44 @@ time_total <- aws.s3::s3read_using(
     FUN = TBox::get_data,
     object = FILE_KEY_S3,
     bucket = BUCKET,
-    opts = list("region" = "")
+    opts = list(region = "")
 )
 
 mod_rjd3x13 <- lm(rjd3x13 ~ nb_series, data = time_total)
 mod_RJDemetra <- lm(RJDemetra ~ nb_series, data = time_total)
-mod_cruncher_v2 <- lm(cruncher_v2 ~ nb_series + log(nb_series), data = time_total)
-mod_cruncher_v3 <- lm(cruncher_v3 ~ nb_series + log(nb_series), data = time_total)
+mod_cruncher_v2 <- lm(cruncher_v2 ~ nb_series + log(nb_series),
+                      data = time_total)
+mod_cruncher_v3 <- lm(cruncher_v3 ~ nb_series + log(nb_series),
+                      data = time_total)
 
 df <- tidyr::pivot_longer(time_total, cols = -nb_series, values_to = "time") |>
     mutate(type = "realised")
 df <- rbind(
     df,
     data.frame(
-        nb_series = rep(seq_len(10000), times = 4),
-        name = rep(c("rjd3x13", "RJDemetra", "cruncher_v2", "cruncher_v3"), each = 10000),
+        nb_series = rep(seq_len(10000L), times = 4L),
+        name = rep(c("rjd3x13", "RJDemetra", "cruncher_v2", "cruncher_v3"),
+                   each = 10000L),
         time = c(
-            predict(mod_rjd3x13, newdata = data.frame(nb_series = seq_len(10000))),
-            predict(mod_RJDemetra, newdata = data.frame(nb_series = seq_len(10000))),
-            predict(mod_cruncher_v2, newdata = data.frame(nb_series = seq_len(10000))),
-            predict(mod_cruncher_v3, newdata = data.frame(nb_series = seq_len(10000)))
+            predict(
+                mod_rjd3x13,
+                newdata = data.frame(nb_series = seq_len(10000L))
+            ),
+            predict(
+                mod_RJDemetra,
+                newdata = data.frame(nb_series = seq_len(10000L))
+            ),
+            predict(
+                mod_cruncher_v2,
+                newdata = data.frame(nb_series = seq_len(10000L))
+            ),
+            predict(
+                mod_cruncher_v3,
+                newdata = data.frame(nb_series = seq_len(10000L))
+            )
         ),
-        type  = "pred"
+        type  = "pred",
+        stringsAsFactors = FALSE
     )
 )
 ```
@@ -90,7 +106,7 @@ Sur moins de 100 séries :
 
 ```{r length minus 100, eval = TRUE, echo = FALSE}
 df |>
-    filter(nb_series < 100, name != "RJDemetra") |>
+    filter(nb_series < 100L, name != "RJDemetra") |>
     ggplot(data = _, aes(x = nb_series, y = time, color = name)) +
     geom_point(
         data = ~ filter(.x, type == "realised"),
